@@ -1,6 +1,6 @@
 return (
   <Deck transition={['zoom','slide']} transitionDuration={800}>
-    <Slide bgColor="primary">
+    <Slide bgColor="black">
       <Heading size={1} fit caps>
         React Presentations
       </Heading>
@@ -13,7 +13,7 @@ return (
         Wait What?
       </Heading>
     </Slide>
-    <Slide bgColor="primary" textColor="black" align="center top">
+    <Slide bgColor="black" textColor="black" align="center top">
       <Heading size={1} textColor="black" textFont="primary">
         Thats right
       </Heading>
