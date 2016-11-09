@@ -37,15 +37,13 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
   kelly: require("../assets/kelly.jpg"),
   cover: require("../assets/cover.jpg"),
   layout: require("../assets/layout.jpg"),
   brain_1: require("../assets/brain_willpower.png"),
   brain_2: require("../assets/brain_willpower2.png"),
-  cheesecake: require("../assets/cheesecake.jpg")
+  cheesecake: require("../assets/cheesecake.jpg"),
+  muscle: require("../assets/muscle.jpg")
 };
 
 preloader(images);
@@ -89,7 +87,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
 
-          <Slide transition={["zoom"]} bgImage={images.cheesecake.replace("/", "")}>
+          <Slide transition={["zoom", "spin"]} bgImage={images.cheesecake.replace("/", "")}>
             <Appear fid="1">
               <Text textSize="1em" margin="0px auto 40px" bold textColor="orange">1. Почему иногда легко сопротивляться чизкейку, а иногда нет</Text>
             </Appear>
@@ -107,109 +105,35 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide transition={["zoom"]} bgImage={images.cheesecake.replace("/", "")}>
-
-          </Slide>
-
-
-
-
-
-
-
-
-
-
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
-          </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+          <Slide transition={["zoom", "spin"]} bgImage={images.muscle.replace("/", "")}>
             <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
+              <Text textSize="1em" margin="0px auto 40px" bold textColor="orange">1. Самоконтроль - мышца?</Text>
             </Appear>
             <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
+              <Text textSize="1em" margin="0px auto 40px" bold textColor="orange">2. Почему самоконтроль ограничен? Сахарок</Text>
             </Appear>
             <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
+              <Text textSize="1em" margin="0px auto 40px" bold textColor="orange">3. Энергетический кризис</Text>
             </Appear>
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
+            <Appear fid="4">
+              <Text textSize="1em" margin="0px auto 40px" bold textColor="orange">4. Простая тренировка:</Text>
+            </Appear>
+            <Appear fid="4">
+              <Text textSize="0.75em" margin="0px auto 40px" bold textColor="white">-    I wont (отказаться от вредной привычки); </Text>
+            </Appear>
+            <Appear fid="5">
+              <Text textSize="0.75em" margin="0px auto 40px" bold textColor="white">-    I will (делать что-то ежедневно); </Text>
+            </Appear>
+            <Appear fid="6">
+              <Text textSize="0.75em" margin="0px auto 40px" bold textColor="white">-    самоконтроль (вести блог/дневник ежедневно) </Text>
+            </Appear>
 
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
           </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
+
+          <Slide transition={["zoom", "spin"]} bgImage={images.muscle.replace("/", "")}>
+
           </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
-          </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
-            </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
-          </Slide>
+
         </Deck>
       </Spectacle>
     );
